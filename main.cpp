@@ -19,7 +19,7 @@ void clearAndReload(QQmlApplicationEngine &engine){
         obj->deleteLater();
     }
     engine.clearComponentCache();
-    engine.load(QUrl(QString(QMLSOURCEDIR )+ "/main.qml"));
+    engine.load(QUrl::fromLocalFile(QString(QMLSOURCEDIR )+ "/main.qml"));
 }
 
 int main(int argc, char *argv[])
